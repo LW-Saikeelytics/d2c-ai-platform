@@ -1,0 +1,236 @@
+{
+  "config_version": "1.0",
+  "company_id": "DNL",
+  "company_name": "DreamNest Living",
+  "company_type": "D2C Omnichannel",
+  "business_domain": "Home & Sleep",
+  "country": "India",
+  "currency": "INR",
+  "simulation_duration_days": 30,
+  "simulation_start_weekday": "Monday",
+  "weekday_activity_multipliers": {
+    "Monday": 0.95,
+    "Tuesday": 0.95,
+    "Wednesday": 1.0,
+    "Thursday": 1.0,
+    "Friday": 1.05,
+    "Saturday": 1.2,
+    "Sunday": 1.15
+  },
+  "simulation_start_date": "2026-09-28",
+  "seasonality_month_multipliers": {
+    "January": 0.95,
+    "February": 0.95,
+    "March": 1.0,
+    "April": 1.0,
+    "May": 1.0,
+    "June": 0.95,
+    "July": 0.95,
+    "August": 1.0,
+    "September": 1.05,
+    "October": 1.2,
+    "November": 1.15,
+    "December": 1.1
+  },
+  "target_orders_per_day": 2000,
+  "acceptable_daily_orders_min": 1850,
+  "acceptable_daily_orders_max": 2150,
+  "target_total_orders": 60000,
+  "channels": [
+    "website",
+    "mobile_app",
+    "marketplace",
+    "offline_store"
+  ],
+  "regions": [
+    "North",
+    "South",
+    "East",
+    "West",
+    "Central"
+  ],
+  "customer_lifecycle": {
+    "new_prospect_days": 30,
+    "recent_buyer_days": 7,
+    "active_buyer_days": 30,
+    "at_risk_days": 60,
+    "activity_multipliers": {
+      "new_prospect": 1.1,
+      "established_prospect": 0.85,
+      "recent_buyer": 0.9,
+      "active_buyer": 1.0,
+      "at_risk": 0.75,
+      "dormant": 0.5
+    }
+  },
+  "repeat_purchase_behavior": {
+    "0_to_3_days_multiplier": 0.35,
+    "4_to_7_days_multiplier": 0.55,
+    "8_to_14_days_multiplier": 0.8,
+    "15_to_30_days_multiplier": 1.0,
+    "31_plus_days_multiplier": 1.1
+  },
+  "churn_behavior": {
+    "inactive_after_days": 45,
+    "churned_after_days": 90,
+    "activity_multipliers": {
+      "active": 1.0,
+      "inactive": 0.6,
+      "churned": 0.2
+    }
+  },
+  "behavior_profiles": {
+    "cautious": {
+      "weight": 25,
+      "activity_multiplier": 0.85,
+      "cart_multiplier": 0.8,
+      "purchase_multiplier": 0.8,
+      "conversion_multiplier": 0.92
+    },
+    "balanced": {
+      "weight": 50,
+      "activity_multiplier": 1.0,
+      "cart_multiplier": 1.0,
+      "purchase_multiplier": 1.0,
+      "conversion_multiplier": 1.0
+    },
+    "engaged": {
+      "weight": 25,
+      "activity_multiplier": 1.15,
+      "cart_multiplier": 1.2,
+      "purchase_multiplier": 1.15,
+      "conversion_multiplier": 1.08
+    }
+  },
+  "price_band_preference_weights": {
+    "low": {
+      "Entry": 8,
+      "Mid": 3,
+      "Premium": 1
+    },
+    "medium": {
+      "Entry": 2,
+      "Mid": 6,
+      "Premium": 2
+    },
+    "high": {
+      "Entry": 1,
+      "Mid": 3,
+      "Premium": 8
+    }
+  },
+  "product_popularity": {
+    "default_weight": 1.0,
+    "overrides": {
+      "PRD-MAT-001": 1.35,
+      "PRD-MAT-002": 1.15,
+      "PRD-PIL-001": 1.6,
+      "PRD-PIL-002": 0.7,
+      "PRD-BED-005": 1.3,
+      "PRD-BED-006": 1.1,
+      "PRD-ACC-001": 1.25,
+      "PRD-REC-001": 1.2
+    }
+  },
+  "promotion_behavior": {
+    "discount_band_multipliers": {
+      "small": 1.1,
+      "medium": 1.2,
+      "high": 1.35
+    }
+  },
+  "inventory_behavior": {
+    "default_status": "in_stock",
+    "status_multipliers": {
+      "in_stock": 1.0,
+      "low_stock": 0.45,
+      "out_of_stock": 0.0
+    },
+    "regional_overrides": {
+      "North": {
+        "PRD-MAT-005": "low_stock",
+        "PRD-BED-004": "out_of_stock"
+      },
+      "South": {
+        "PRD-BED-004": "low_stock",
+        "PRD-REC-002": "out_of_stock"
+      },
+      "West": {
+        "PRD-MAT-007": "low_stock"
+      },
+      "East": {
+        "PRD-PIL-003": "low_stock"
+      },
+      "Central": {
+        "PRD-SOF-004": "low_stock"
+      }
+    }
+  },
+  "order_value_behavior": {
+    "category_quantity_weights": {
+      "Mattresses": {
+        "1": 97,
+        "2": 3
+      },
+      "Beds": {
+        "1": 99,
+        "2": 1
+      },
+      "Sofas": {
+        "1": 99,
+        "2": 1
+      },
+      "Recliners": {
+        "1": 98,
+        "2": 2
+      },
+      "Pillows": {
+        "1": 72,
+        "2": 23,
+        "3": 5
+      },
+      "Bedding": {
+        "1": 75,
+        "2": 20,
+        "3": 5
+      },
+      "Sleep Accessories": {
+        "1": 78,
+        "2": 18,
+        "3": 4
+      }
+    },
+    "multi_unit_price_band_multipliers": {
+      "Entry": 1.25,
+      "Mid": 1.0,
+      "Premium": 0.65
+    }
+  },
+  "conversion_distribution": {
+    "base_probabilities": {
+      "view_only": 0.04,
+      "add_to_cart": 0.16,
+      "purchase_intent": 0.38
+    },
+    "repeat_tendency_multipliers": {
+      "low": 0.9,
+      "medium": 1.0,
+      "high": 1.12
+    },
+    "propensity_reference": 0.18,
+    "propensity_min_multiplier": 0.65,
+    "propensity_max_multiplier": 1.35,
+    "preferred_category_multiplier": 1.08,
+    "purchase_history_multipliers": {
+      "first_purchase": 0.95,
+      "repeat_customer": 1.05
+    },
+    "maximum_probability": 0.75
+  },
+  "event_funnel_behavior": {
+    "base_add_to_cart_probability": 0.35,
+    "base_purchase_intent_probability": 0.25,
+    "minimum_stage_probability": 0.05,
+    "maximum_stage_probability": 0.90
+  }
+}

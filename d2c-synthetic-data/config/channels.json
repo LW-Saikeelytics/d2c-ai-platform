@@ -1,0 +1,22 @@
+[
+  {
+    "channel_id":"CH-WEB",
+    "channel_name":"Website",
+    "baseline_share":"high"
+  },
+  {
+    "channel_id":"CH-APP",
+    "channel_name":"Mobile App",
+    "baseline_share":"medium"
+  },
+  {
+    "channel_id":"CH-MKT",
+    "channel_name":"Marketplace",
+    "baseline_share":"medium"
+  },
+  {
+    "channel_id":"CH-STORE",
+    "channel_name":"Offline Store",
+    "baseline_share":"low"
+  }
+]

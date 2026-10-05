@@ -1,0 +1,56 @@
+{
+  "validation_version":"1.0",
+
+  "identity_checks":[
+    "order_id_unique",
+    "customer_id_valid",
+    "product_id_valid",
+    "variant_id_valid"
+  ],
+
+  "relationship_checks":[
+    "variant_belongs_to_product",
+    "warehouse_valid_for_destination",
+    "carrier_valid_for_destination",
+    "payment_method_valid_for_channel"
+  ],
+
+  "temporal_checks":[
+    "order_before_confirmation",
+    "confirmation_before_shipment",
+    "shipment_before_delivery",
+    "delivery_before_review",
+    "delivery_before_return",
+    "return_before_refund"
+  ],
+
+  "financial_checks":[
+    "quantity_positive",
+    "unit_price_matches_master",
+    "subtotal_reconciles",
+    "discount_valid",
+    "final_amount_reconciles",
+    "refund_reconciles"
+  ],
+
+  "inventory_checks":[
+    "inventory_non_negative",
+    "inventory_state_persistent"
+  ],
+
+  "simulation_checks":[
+    "product_active_on_order_day",
+    "promotion_active_on_order_day",
+    "no_future_information_leakage",
+    "no_hidden_ground_truth_fields",
+    "no_unconfigured_entities"
+  ],
+
+  "quality_checks":[
+    "no_duplicate_orders",
+    "no_impossible_timestamps",
+    "no_invalid_relationships",
+    "no_malformed_json",
+    "no_excessive_repetitive_text"
+  ]
+}

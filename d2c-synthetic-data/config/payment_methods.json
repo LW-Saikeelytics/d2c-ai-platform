@@ -1,0 +1,44 @@
+[
+  {
+    "payment_method_id":"PAY-UPI",
+    "payment_method":"UPI",
+    "eligible_channels":["website","mobile_app","marketplace","offline_store"],
+    "baseline_failure_rate":"low"
+  },
+  {
+    "payment_method_id":"PAY-CC",
+    "payment_method":"Credit Card",
+    "eligible_channels":["website","mobile_app","marketplace","offline_store"],
+    "baseline_failure_rate":"low"
+  },
+  {
+    "payment_method_id":"PAY-DC",
+    "payment_method":"Debit Card",
+    "eligible_channels":["website","mobile_app","marketplace","offline_store"],
+    "baseline_failure_rate":"low"
+  },
+  {
+    "payment_method_id":"PAY-NB",
+    "payment_method":"Net Banking",
+    "eligible_channels":["website","mobile_app","marketplace"],
+    "baseline_failure_rate":"low"
+  },
+  {
+    "payment_method_id":"PAY-COD",
+    "payment_method":"Cash on Delivery",
+    "eligible_channels":["website","mobile_app","marketplace"],
+    "baseline_failure_rate":"medium"
+  },
+  {
+    "payment_method_id":"PAY-EMI",
+    "payment_method":"EMI",
+    "eligible_channels":["website","mobile_app","offline_store"],
+    "baseline_failure_rate":"low"
+  },
+  {
+    "payment_method_id":"PAY-WALLET",
+    "payment_method":"Wallet",
+    "eligible_channels":["website","mobile_app","marketplace"],
+    "baseline_failure_rate":"low"
+  }
+]

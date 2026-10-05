@@ -1,0 +1,361 @@
+{
+  "schema_version": "1.0",
+  "record_type": "order",
+
+  "record_definition": "One record represents one customer order and its associated business context.",
+
+  "required_fields": {
+    "order_id": {
+      "type": "string",
+      "required": true,
+      "format": "ORD-YYYYMMDD-NNNNNN",
+      "description": "Globally unique order identifier."
+    },
+
+    "order_date": {
+      "type": "date",
+      "required": true,
+      "format": "YYYY-MM-DD",
+      "description": "Calendar date on which the order was placed."
+    },
+
+    "order_timestamp": {
+      "type": "datetime",
+      "required": true,
+      "format": "YYYY-MM-DDTHH:MM:SS",
+      "description": "Timestamp at which the order was placed."
+    },
+
+    "customer_id": {
+      "type": "string",
+      "required": true,
+      "format": "CUS-NNNNNN",
+      "description": "Persistent customer identifier."
+    },
+
+    "customer_segment": {
+      "type": "string",
+      "required": true,
+      "allowed_source": "customer_segments.json",
+      "description": "Customer segment associated with the customer."
+    },
+
+    "customer_type": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "new",
+        "returning"
+      ],
+      "description": "Whether the customer is placing their first order or has ordered previously."
+    },
+
+    "city_id": {
+      "type": "string",
+      "required": true,
+      "allowed_source": "city_master.json",
+      "description": "Customer delivery city."
+    },
+
+    "region": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "North",
+        "South",
+        "East",
+        "West",
+        "Central"
+      ],
+      "description": "Region derived from city_master."
+    },
+
+    "channel": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "website",
+        "mobile_app",
+        "marketplace",
+        "offline_store"
+      ],
+      "description": "Sales channel through which the order originated."
+    },
+
+    "product_id": {
+      "type": "string",
+      "required": true,
+      "allowed_source": "product_master.json",
+      "description": "Product purchased."
+    },
+
+    "product_category": {
+      "type": "string",
+      "required": true,
+      "description": "Category derived from product_master."
+    },
+
+    "product_subcategory": {
+      "type": "string",
+      "required": true,
+      "description": "Subcategory derived from product_master."
+    },
+
+    "variant_id": {
+      "type": "string",
+      "required": true,
+      "allowed_source": "variant_master.json",
+      "description": "Specific product variant purchased."
+    },
+
+    "quantity": {
+      "type": "integer",
+      "required": true,
+      "minimum": 1,
+      "description": "Number of units purchased."
+    },
+
+    "unit_price": {
+      "type": "number",
+      "required": true,
+      "minimum": 0,
+      "description": "Master price of the selected variant before discounts."
+    },
+
+    "subtotal": {
+      "type": "number",
+      "required": true,
+      "minimum": 0,
+      "description": "quantity multiplied by unit_price."
+    },
+
+    "promotion_id": {
+      "type": "string_or_null",
+      "required": true,
+      "allowed_source": "promotions.json",
+      "description": "Promotion applied to the order. Null when no promotion applies."
+    },
+
+    "discount_amount": {
+      "type": "number",
+      "required": true,
+      "minimum": 0,
+      "description": "Absolute discount amount applied to the order."
+    },
+
+    "shipping_fee": {
+      "type": "number",
+      "required": true,
+      "minimum": 0,
+      "description": "Shipping charge applied to the order."
+    },
+
+    "final_order_value": {
+      "type": "number",
+      "required": true,
+      "minimum": 0,
+      "description": "Final amount charged after discount and shipping."
+    },
+
+    "payment_method": {
+      "type": "string",
+      "required": true,
+      "allowed_source": "payment_methods.json",
+      "description": "Payment method used."
+    },
+
+    "payment_status": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "paid",
+        "pending",
+        "failed",
+        "refunded",
+        "partially_refunded"
+      ],
+      "description": "Current payment state."
+    },
+
+    "order_status": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "confirmed",
+        "cancelled",
+        "fulfilled",
+        "delivered",
+        "returned"
+      ],
+      "description": "Current lifecycle state of the order."
+    },
+
+    "warehouse_id": {
+      "type": "string_or_null",
+      "required": true,
+      "allowed_source": "warehouse_master.json",
+      "description": "Warehouse responsible for fulfilment. Null when the order is cancelled before fulfilment assignment."
+    },
+
+    "carrier_id": {
+      "type": "string_or_null",
+      "required": true,
+      "allowed_source": "carrier_master.json",
+      "description": "Carrier responsible for delivery. Null when the order does not reach shipment."
+    },
+
+    "expected_delivery_date": {
+      "type": "date_or_null",
+      "required": true,
+      "format": "YYYY-MM-DD",
+      "description": "Expected delivery date established after fulfilment."
+    },
+
+    "actual_delivery_date": {
+      "type": "date_or_null",
+      "required": true,
+      "format": "YYYY-MM-DD",
+      "description": "Actual delivery date. Null if not delivered."
+    },
+
+    "delivery_status": {
+      "type": "string",
+      "required": true,
+      "allowed_values": [
+        "not_shipped",
+        "in_transit",
+        "delivered",
+        "delayed",
+        "cancelled"
+      ],
+      "description": "Delivery state."
+    },
+
+    "delivery_events": {
+      "type": "array",
+      "required": true,
+      "description": "Chronological delivery event history.",
+      "items": {
+        "event_type": {
+          "type": "string",
+          "allowed_values": [
+            "order_confirmed",
+            "packed",
+            "shipped",
+            "in_transit",
+            "out_for_delivery",
+            "delivered",
+            "delivery_attempted",
+            "delivery_delayed"
+          ]
+        },
+        "event_timestamp": {
+          "type": "datetime",
+          "format": "YYYY-MM-DDTHH:MM:SS"
+        }
+      }
+    },
+
+    "review": {
+      "type": "object_or_null",
+      "required": true,
+      "description": "Optional customer review associated with the order.",
+      "fields": {
+        "rating": {
+          "type": "integer",
+          "allowed_values": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        "review_text": {
+          "type": "string"
+        },
+        "review_date": {
+          "type": "date",
+          "format": "YYYY-MM-DD"
+        }
+      }
+    },
+
+    "support_interaction": {
+      "type": "object_or_null",
+      "required": true,
+      "description": "Optional customer support interaction associated with the order.",
+      "fields": {
+        "support_category": {
+          "type": "string",
+          "allowed_source": "support_categories.json"
+        },
+        "interaction_date": {
+          "type": "date",
+          "format": "YYYY-MM-DD"
+        },
+        "customer_message": {
+          "type": "string"
+        },
+        "resolution_status": {
+          "type": "string",
+          "allowed_values": [
+            "resolved",
+            "pending",
+            "escalated"
+          ]
+        }
+      }
+    },
+
+    "return": {
+      "type": "object_or_null",
+      "required": true,
+      "description": "Optional return information.",
+      "fields": {
+        "return_date": {
+          "type": "date",
+          "format": "YYYY-MM-DD"
+        },
+        "return_reason": {
+          "type": "string",
+          "allowed_source": "return_reasons.json"
+        },
+        "return_status": {
+          "type": "string",
+          "allowed_values": [
+            "requested",
+            "approved",
+            "picked_up",
+            "received",
+            "rejected"
+          ]
+        }
+      }
+    },
+
+    "refund": {
+      "type": "object_or_null",
+      "required": true,
+      "description": "Optional refund information.",
+      "fields": {
+        "refund_date": {
+          "type": "date",
+          "format": "YYYY-MM-DD"
+        },
+        "refund_amount": {
+          "type": "number",
+          "minimum": 0
+        },
+        "refund_status": {
+          "type": "string",
+          "allowed_values": [
+            "initiated",
+            "processed",
+            "failed"
+          ]
+        }
+      }
+    }
+  }
+}

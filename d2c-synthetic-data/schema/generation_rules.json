@@ -1,0 +1,67 @@
+{
+  "rules_version":"1.0",
+
+  "core_rules":[
+    "Treat all supplied master configuration as authoritative.",
+    "Never invent master entities.",
+    "Never modify master entity attributes during generation.",
+    "Never change the transaction schema.",
+    "Generate one order-level record per JSONL line.",
+    "Use controlled randomness and realistic variation.",
+    "Generate observations rather than conclusions.",
+    "Never expose hidden ground truth.",
+    "Never use future simulation information.",
+    "Maintain continuity across simulation days."
+  ],
+
+  "entity_rules":[
+    "Every order_id must be unique.",
+    "Every product_id must exist in product_master.",
+    "Every variant_id must exist in variant_master.",
+    "Every variant must belong to the selected product.",
+    "Every city must exist in city_master.",
+    "Every warehouse must exist in warehouse_master.",
+    "Every carrier must exist in carrier_master.",
+    "Every customer segment must exist in customer_segments.",
+    "Every payment method must exist in payment_methods."
+  ],
+
+  "temporal_rules":[
+    "Order timestamp must precede fulfilment events.",
+    "Shipment cannot occur before order confirmation.",
+    "Delivery cannot occur before shipment.",
+    "Review cannot occur before delivery.",
+    "Return cannot occur before delivery unless explicitly permitted by configuration.",
+    "Refund cannot occur before an eligible return or cancellation event."
+  ],
+
+  "product_rules":[
+    "Products may only appear in orders on or after launch_day.",
+    "Discontinued products may not appear after discontinue_day.",
+    "Variants may only appear on or after their launch_day.",
+    "Variant price must come from variant_master unless an active promotion changes the transaction amount."
+  ],
+
+  "financial_rules":[
+    "Quantity must be positive.",
+    "Unit price must match the selected variant.",
+    "Subtotal must reconcile with quantity and unit price.",
+    "Discount cannot exceed applicable order value.",
+    "Final amount must reconcile mathematically.",
+    "Refund amounts must reconcile with the original transaction."
+  ],
+
+  "inventory_rules":[
+    "Inventory cannot become negative.",
+    "Fulfilment must use valid warehouse inventory.",
+    "Inventory state must persist across days."
+  ],
+
+  "text_rules":[
+    "Generate natural variation in customer text.",
+    "Do not use repetitive templates excessively.",
+    "Review text must be consistent with rating.",
+    "Support text must be consistent with support category.",
+    "Do not insert causal conclusions into free text."
+  ]
+}

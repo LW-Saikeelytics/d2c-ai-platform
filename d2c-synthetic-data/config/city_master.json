@@ -1,0 +1,29 @@
+[
+  {"city_id":"CITY-DEL","city":"Delhi","state":"Delhi","region":"North","tier":"Tier 1"},
+  {"city_id":"CITY-GGN","city":"Gurugram","state":"Haryana","region":"North","tier":"Tier 1"},
+  {"city_id":"CITY-NOI","city":"Noida","state":"Uttar Pradesh","region":"North","tier":"Tier 1"},
+  {"city_id":"CITY-JAI","city":"Jaipur","state":"Rajasthan","region":"North","tier":"Tier 2"},
+  {"city_id":"CITY-LKO","city":"Lucknow","state":"Uttar Pradesh","region":"North","tier":"Tier 2"},
+  {"city_id":"CITY-CHD","city":"Chandigarh","state":"Chandigarh","region":"North","tier":"Tier 2"},
+
+  {"city_id":"CITY-BLR","city":"Bengaluru","state":"Karnataka","region":"South","tier":"Tier 1"},
+  {"city_id":"CITY-HYD","city":"Hyderabad","state":"Telangana","region":"South","tier":"Tier 1"},
+  {"city_id":"CITY-CHN","city":"Chennai","state":"Tamil Nadu","region":"South","tier":"Tier 1"},
+  {"city_id":"CITY-COK","city":"Kochi","state":"Kerala","region":"South","tier":"Tier 2"},
+  {"city_id":"CITY-CJB","city":"Coimbatore","state":"Tamil Nadu","region":"South","tier":"Tier 2"},
+
+  {"city_id":"CITY-MUM","city":"Mumbai","state":"Maharashtra","region":"West","tier":"Tier 1"},
+  {"city_id":"CITY-PUN","city":"Pune","state":"Maharashtra","region":"West","tier":"Tier 1"},
+  {"city_id":"CITY-AHM","city":"Ahmedabad","state":"Gujarat","region":"West","tier":"Tier 1"},
+  {"city_id":"CITY-SUR","city":"Surat","state":"Gujarat","region":"West","tier":"Tier 2"},
+  {"city_id":"CITY-NAG","city":"Nagpur","state":"Maharashtra","region":"West","tier":"Tier 2"},
+
+  {"city_id":"CITY-KOL","city":"Kolkata","state":"West Bengal","region":"East","tier":"Tier 1"},
+  {"city_id":"CITY-BBS","city":"Bhubaneswar","state":"Odisha","region":"East","tier":"Tier 2"},
+  {"city_id":"CITY-PAT","city":"Patna","state":"Bihar","region":"East","tier":"Tier 2"},
+  {"city_id":"CITY-RNC","city":"Ranchi","state":"Jharkhand","region":"East","tier":"Tier 2"},
+
+  {"city_id":"CITY-IDR","city":"Indore","state":"Madhya Pradesh","region":"Central","tier":"Tier 2"},
+  {"city_id":"CITY-BHO","city":"Bhopal","state":"Madhya Pradesh","region":"Central","tier":"Tier 2"},
+  {"city_id":"CITY-RPR","city":"Raipur","state":"Chhattisgarh","region":"Central","tier":"Tier 2"}
+]

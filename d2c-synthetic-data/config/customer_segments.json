@@ -1,0 +1,42 @@
+[
+  {
+    "segment_id":"SEG-001",
+    "segment_name":"Value Seeker",
+    "price_tendency":"low",
+    "discount_sensitivity":"high",
+    "premium_product_tendency":"low",
+    "repeat_purchase_tendency":"medium"
+  },
+  {
+    "segment_id":"SEG-002",
+    "segment_name":"Comfort Focused",
+    "price_tendency":"medium",
+    "discount_sensitivity":"medium",
+    "premium_product_tendency":"medium",
+    "repeat_purchase_tendency":"medium"
+  },
+  {
+    "segment_id":"SEG-003",
+    "segment_name":"Premium Buyer",
+    "price_tendency":"high",
+    "discount_sensitivity":"low",
+    "premium_product_tendency":"high",
+    "repeat_purchase_tendency":"medium"
+  },
+  {
+    "segment_id":"SEG-004",
+    "segment_name":"Convenience Driven",
+    "price_tendency":"medium",
+    "discount_sensitivity":"medium",
+    "premium_product_tendency":"medium",
+    "repeat_purchase_tendency":"high"
+  },
+  {
+    "segment_id":"SEG-005",
+    "segment_name":"First-Time Explorer",
+    "price_tendency":"medium",
+    "discount_sensitivity":"high",
+    "premium_product_tendency":"low",
+    "repeat_purchase_tendency":"low"
+  }
+]

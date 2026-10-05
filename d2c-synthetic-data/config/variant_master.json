@@ -1,0 +1,427 @@
+[
+  {
+    "variant_id": "VAR-MAT001-S6",
+    "product_id": "PRD-MAT-001",
+    "variant_name": "Single 6 inch",
+    "size": "Single",
+    "dimensions": "72x36x6",
+    "unit_price": 12999,
+    "weight_kg": 18,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT001-Q6",
+    "product_id": "PRD-MAT-001",
+    "variant_name": "Queen 6 inch",
+    "size": "Queen",
+    "dimensions": "78x60x6",
+    "unit_price": 16999,
+    "weight_kg": 25,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT001-K6",
+    "product_id": "PRD-MAT-001",
+    "variant_name": "King 6 inch",
+    "size": "King",
+    "dimensions": "78x72x6",
+    "unit_price": 18999,
+    "weight_kg": 29,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-MAT002-Q8",
+    "product_id": "PRD-MAT-002",
+    "variant_name": "Queen 8 inch",
+    "size": "Queen",
+    "dimensions": "78x60x8",
+    "unit_price": 21999,
+    "weight_kg": 31,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT002-K8",
+    "product_id": "PRD-MAT-002",
+    "variant_name": "King 8 inch",
+    "size": "King",
+    "dimensions": "78x72x8",
+    "unit_price": 24999,
+    "weight_kg": 36,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-MAT003-Q6",
+    "product_id": "PRD-MAT-003",
+    "variant_name": "Queen 6 inch",
+    "size": "Queen",
+    "dimensions": "78x60x6",
+    "unit_price": 17999,
+    "weight_kg": 27,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT003-K6",
+    "product_id": "PRD-MAT-003",
+    "variant_name": "King 6 inch",
+    "size": "King",
+    "dimensions": "78x72x6",
+    "unit_price": 19999,
+    "weight_kg": 31,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-MAT004-Q6",
+    "product_id": "PRD-MAT-004",
+    "variant_name": "Queen 6 inch",
+    "size": "Queen",
+    "dimensions": "78x60x6",
+    "unit_price": 22999,
+    "weight_kg": 28,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT004-K6",
+    "product_id": "PRD-MAT-004",
+    "variant_name": "King 6 inch",
+    "size": "King",
+    "dimensions": "78x72x6",
+    "unit_price": 25999,
+    "weight_kg": 33,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-MAT005-Q8",
+    "product_id": "PRD-MAT-005",
+    "variant_name": "Queen 8 inch",
+    "size": "Queen",
+    "dimensions": "78x60x8",
+    "unit_price": 24999,
+    "weight_kg": 34,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT005-K8",
+    "product_id": "PRD-MAT-005",
+    "variant_name": "King 8 inch",
+    "size": "King",
+    "dimensions": "78x72x8",
+    "unit_price": 27999,
+    "weight_kg": 39,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-MAT006-Q6",
+    "product_id": "PRD-MAT-006",
+    "variant_name": "Queen 6 inch",
+    "size": "Queen",
+    "dimensions": "78x60x6",
+    "unit_price": 9999,
+    "weight_kg": 23,
+    "launch_day": 6
+  },
+  {
+    "variant_id": "VAR-MAT006-K6",
+    "product_id": "PRD-MAT-006",
+    "variant_name": "King 6 inch",
+    "size": "King",
+    "dimensions": "78x72x6",
+    "unit_price": 11999,
+    "weight_kg": 27,
+    "launch_day": 6
+  },
+
+  {
+    "variant_id": "VAR-MAT007-Q8",
+    "product_id": "PRD-MAT-007",
+    "variant_name": "Queen 8 inch",
+    "size": "Queen",
+    "dimensions": "78x60x8",
+    "unit_price": 23999,
+    "weight_kg": 32,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-MAT007-K8",
+    "product_id": "PRD-MAT-007",
+    "variant_name": "King 8 inch",
+    "size": "King",
+    "dimensions": "78x72x8",
+    "unit_price": 26999,
+    "weight_kg": 37,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-BED001-Q",
+    "product_id": "PRD-BED-001",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 32999,
+    "weight_kg": 65,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED001-K",
+    "product_id": "PRD-BED-001",
+    "variant_name": "King",
+    "size": "King",
+    "dimensions": "78x72",
+    "unit_price": 37999,
+    "weight_kg": 75,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-BED002-Q",
+    "product_id": "PRD-BED-002",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 44999,
+    "weight_kg": 72,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED002-K",
+    "product_id": "PRD-BED-002",
+    "variant_name": "King",
+    "size": "King",
+    "dimensions": "78x72",
+    "unit_price": 49999,
+    "weight_kg": 82,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-BED003-Q",
+    "product_id": "PRD-BED-003",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 47999,
+    "weight_kg": 68,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED003-K",
+    "product_id": "PRD-BED-003",
+    "variant_name": "King",
+    "size": "King",
+    "dimensions": "78x72",
+    "unit_price": 52999,
+    "weight_kg": 78,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-BED004-Q",
+    "product_id": "PRD-BED-004",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 51999,
+    "weight_kg": 85,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED004-K",
+    "product_id": "PRD-BED-004",
+    "variant_name": "King",
+    "size": "King",
+    "dimensions": "78x72",
+    "unit_price": 57999,
+    "weight_kg": 98,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-SOF001-STD",
+    "product_id": "PRD-SOF-001",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "72x32",
+    "unit_price": 29999,
+    "weight_kg": 42,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-SOF002-STD",
+    "product_id": "PRD-SOF-002",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "84x34",
+    "unit_price": 44999,
+    "weight_kg": 55,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-SOF003-STD",
+    "product_id": "PRD-SOF-003",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "84x34",
+    "unit_price": 39999,
+    "weight_kg": 52,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-SOF004-STD",
+    "product_id": "PRD-SOF-004",
+    "variant_name": "Standard",
+    "size": "Sectional",
+    "dimensions": "110x40",
+    "unit_price": 69999,
+    "weight_kg": 85,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-REC001-STD",
+    "product_id": "PRD-REC-001",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "32x34x42",
+    "unit_price": 24999,
+    "weight_kg": 32,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-REC002-STD",
+    "product_id": "PRD-REC-002",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "34x36x44",
+    "unit_price": 44999,
+    "weight_kg": 42,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-PIL001-STD",
+    "product_id": "PRD-PIL-001",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "24x16",
+    "unit_price": 1999,
+    "weight_kg": 1.2,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-PIL002-STD",
+    "product_id": "PRD-PIL-002",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "24x16",
+    "unit_price": 2499,
+    "weight_kg": 1.3,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-PIL003-STD",
+    "product_id": "PRD-PIL-003",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "24x16",
+    "unit_price": 2999,
+    "weight_kg": 1.4,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-PIL004-STD",
+    "product_id": "PRD-PIL-004",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "24x16",
+    "unit_price": 999,
+    "weight_kg": 0.8,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-BED005-Q",
+    "product_id": "PRD-BED-005",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "90x100",
+    "unit_price": 2499,
+    "weight_kg": 1.5,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED006-Q",
+    "product_id": "PRD-BED-006",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "90x100",
+    "unit_price": 3999,
+    "weight_kg": 1.7,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED007-Q",
+    "product_id": "PRD-BED-007",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "90x100",
+    "unit_price": 4499,
+    "weight_kg": 2.5,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-BED008-Q",
+    "product_id": "PRD-BED-008",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "90x100",
+    "unit_price": 5999,
+    "weight_kg": 3,
+    "launch_day": 1
+  },
+
+  {
+    "variant_id": "VAR-ACC001-Q",
+    "product_id": "PRD-ACC-001",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 2499,
+    "weight_kg": 1.2,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-ACC002-Q",
+    "product_id": "PRD-ACC-002",
+    "variant_name": "Queen",
+    "size": "Queen",
+    "dimensions": "78x60",
+    "unit_price": 3499,
+    "weight_kg": 1.4,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-ACC003-STD",
+    "product_id": "PRD-ACC-003",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "One Size",
+    "unit_price": 799,
+    "weight_kg": 0.2,
+    "launch_day": 1
+  },
+  {
+    "variant_id": "VAR-ACC004-STD",
+    "product_id": "PRD-ACC-004",
+    "variant_name": "Standard",
+    "size": "Standard",
+    "dimensions": "18x18",
+    "unit_price": 999,
+    "weight_kg": 0.5,
+    "launch_day": 1
+  }
+]

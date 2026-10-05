@@ -1,0 +1,44 @@
+[
+  {
+    "promotion_id":"PROMO-001",
+    "promotion_name":"New Customer Offer",
+    "start_day":1,
+    "end_day":30,
+    "discount_type":"percentage",
+    "discount_band":"small",
+    "eligibility":"new_customer"
+  },
+  {
+    "promotion_id":"PROMO-002",
+    "promotion_name":"App Welcome Offer",
+    "start_day":1,
+    "end_day":30,
+    "discount_type":"percentage",
+    "discount_band":"small",
+    "eligibility":"mobile_app_new_customer"
+  },
+  {
+    "promotion_id":"PROMO-003",
+    "promotion_name":"Category Bundle Offer",
+    "start_day":1,
+    "end_day":30,
+    "discount_type":"percentage",
+    "discount_band":"small",
+    "eligibility":"selected_product_combinations"
+  },
+  {
+    "promotion_id": "PROMO-004",
+    "promotion_name": "Sleep Better Week",
+    "start_day": 21,
+    "end_day": 25,
+    "discount_type": "percentage",
+    "discount_band": "high",
+    "eligibility": "selected_categories",
+    "target_categories": [
+      "Mattresses",
+      "Pillows",
+      "Bedding",
+      "Sleep Accessories"
+    ]
+  }
+]

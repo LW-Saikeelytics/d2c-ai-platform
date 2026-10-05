@@ -1,0 +1,42 @@
+[
+  {
+    "carrier_id":"CAR-001",
+    "carrier_name":"SwiftRoute Logistics",
+    "service_regions":["North","West"],
+    "service_level":"Standard",
+    "baseline_delivery_days":3,
+    "reliability_band":"High"
+  },
+  {
+    "carrier_id":"CAR-002",
+    "carrier_name":"BlueDartel Express",
+    "service_regions":["South","West"],
+    "service_level":"Standard",
+    "baseline_delivery_days":3,
+    "reliability_band":"High"
+  },
+  {
+    "carrier_id":"CAR-003",
+    "carrier_name":"UrbanFleet",
+    "service_regions":["North","Central","East"],
+    "service_level":"Standard",
+    "baseline_delivery_days":4,
+    "reliability_band":"Medium"
+  },
+  {
+    "carrier_id":"CAR-004",
+    "carrier_name":"ParcelGrid",
+    "service_regions":["South","East"],
+    "service_level":"Standard",
+    "baseline_delivery_days":4,
+    "reliability_band":"Medium"
+  },
+  {
+    "carrier_id":"CAR-005",
+    "carrier_name":"RapidMove",
+    "service_regions":["North","South","West","Central","East"],
+    "service_level":"Standard",
+    "baseline_delivery_days":3,
+    "reliability_band":"Medium"
+  }
+]

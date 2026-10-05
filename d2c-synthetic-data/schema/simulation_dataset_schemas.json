@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "schema_scope": "simulation_runtime_outputs",
+
+  "datasets": {
+
+    "customers": {
+      "required_fields": {
+        "customer_id": {
+          "type": "string"
+        },
+        "segment": {
+          "type": "string"
+        },
+        "price_tendency": {
+          "type": "string"
+        },
+        "discount_sensitivity": {
+          "type": "string"
+        },
+        "premium_product_tendency": {
+          "type": "string"
+        },
+        "repeat_purchase_tendency": {
+          "type": "string"
+        },
+        "city_id": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "acquisition_channel": {
+          "type": "string"
+        },
+        "registration_day": {
+          "type": "integer"
+        },
+        "lifetime_orders": {
+          "type": "integer"
+        },
+        "lifetime_spend": {
+          "type": "number"
+        },
+        "last_order_day": {
+          "type": "integer_or_null"
+        },
+        "preferred_categories": {
+          "type": "array"
+        },
+        "purchase_propensity": {
+          "type": "number"
+        },
+        "status": {
+          "type": "string"
+        },
+        "behavior_profile": {
+        "type": "string"
+        }
+      }
+    },
+
+    "orders": {
+      "required_fields": {
+        "order_id": {
+          "type": "string"
+        },
+        "simulation_day": {
+          "type": "integer"
+        },
+        "customer_id": {
+          "type": "string"
+        },
+        "segment": {
+          "type": "string"
+        },
+        "city_id": {
+          "type": "string"
+        },
+        "region": {
+          "type": "string"
+        },
+        "channel": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": "string"
+        },
+        "variant_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "subcategory": {
+          "type": "string"
+        },
+        "quantity": {
+          "type": "integer"
+        },
+        "unit_price": {
+          "type": "number"
+        },
+        "gross_amount": {
+          "type": "number"
+        }
+      }
+    },
+
+    "events": {
+      "required_fields": {
+        "event_id": {
+          "type": "string"
+        },
+        "simulation_day": {
+          "type": "integer"
+        },
+        "customer_id": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        }
+      },
+
+      "optional_fields": {
+        "product_id": {
+          "type": "string_or_null"
+        },
+        "category": {
+          "type": "string_or_null"
+        },
+        "order_id": {
+          "type": "string_or_null"
+        }
+      }
+    },
+
+    "daily_metrics": {
+      "required_fields": {
+        "simulation_day": {
+          "type": "integer"
+        },
+        "customers": {
+          "type": "integer"
+        },
+        "behavior_events": {
+          "type": "object",
+          "fields": {
+            "customers_with_events": {
+              "type": "integer"
+            },
+            "total_events": {
+              "type": "integer"
+            }
+          }
+        },
+        "conversion": {
+          "type": "object",
+          "fields": {
+            "customers_evaluated": {
+              "type": "integer"
+            },
+            "conversions": {
+              "type": "integer"
+            }
+          }
+        },
+        "orders": {
+          "type": "object",
+          "fields": {
+            "generated_orders": {
+              "type": "integer"
+            },
+            "valid_orders": {
+              "type": "integer"
+            },
+            "invalid_orders": {
+              "type": "integer"
+            }
+          }
+        },
+        "purchase_events": {
+          "type": "integer"
+        }
+      }
+    },
+
+    "behavior_history": {
+      "required_fields": {
+        "simulation_day": {
+          "type": "integer"
+        },
+        "customer_id": {
+          "type": "string"
+        },
+        "event_type": {
+          "type": "string"
+        },
+        "product_id": {
+          "type": "string"
+        },
+        "category": {
+          "type": "string"
+        },
+        "event_id": {
+          "type": "string"
+        }
+      }
+    },
+
+    "conversion_history": {
+      "required_fields": {
+        "simulation_day": {
+          "type": "integer"
+        },
+        "customer_id": {
+          "type": "string"
+        },
+        "result": {
+          "type": "object",
+          "fields": {
+            "converted": {
+              "type": "boolean"
+            },
+            "conversion_probability": {
+              "type": "number"
+            },
+            "product_id": {
+              "type": "string_or_null"
+            }
+          }
+        }
+      }
+    }
+
+  }
+}

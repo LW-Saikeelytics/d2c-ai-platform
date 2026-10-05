@@ -1,0 +1,135 @@
+{
+  "default_scenario": "baseline",
+
+  "scenarios": {
+    "baseline": {
+      "description": "Normal business conditions using baseline simulation configuration.",
+      "overrides": {}
+    },
+
+    "festive_peak": {
+      "description": "Elevated festive demand with stronger engagement, promotion response and conversion.",
+
+      "overrides": {
+        "company": {
+          "seasonality_month_multipliers": {
+            "October": 1.45,
+            "November": 1.30
+          },
+
+          "event_funnel_behavior": {
+            "base_add_to_cart_probability": 0.42,
+            "base_purchase_intent_probability": 0.32
+          },
+
+          "promotion_behavior": {
+            "discount_band_multipliers": {
+              "small": 1.15,
+              "medium": 1.30,
+              "high": 1.45
+            }
+          },
+
+          "conversion_distribution": {
+            "base_probabilities": {
+              "purchase_intent": 0.45
+            }
+          }
+        }
+      }
+    },
+
+    "promotion_heavy": {
+      "description": "Aggressive promotion scenario with stronger offer response.",
+
+      "overrides": {
+        "company": {
+          "promotion_behavior": {
+            "discount_band_multipliers": {
+              "small": 1.20,
+              "medium": 1.35,
+              "high": 1.55
+            }
+          },
+
+          "event_funnel_behavior": {
+            "base_purchase_intent_probability": 0.30
+          }
+        }
+      }
+    },
+
+    "low_inventory": {
+      "description": "Constrained inventory scenario with additional regional stock limitations.",
+
+      "overrides": {
+        "company": {
+          "inventory_behavior": {
+            "regional_overrides": {
+              "North": {
+                "PRD-BED-001": "low_stock",
+                "PRD-BED-004": "out_of_stock",
+                "PRD-MAT-005": "out_of_stock"
+              },
+
+              "South": {
+                "PRD-REC-001": "low_stock",
+                "PRD-REC-002": "out_of_stock"
+              },
+
+              "West": {
+                "PRD-MAT-007": "out_of_stock",
+                "PRD-PIL-003": "low_stock"
+              },
+
+              "East": {
+                "PRD-PIL-003": "out_of_stock",
+                "PRD-BED-008": "low_stock"
+              },
+
+              "Central": {
+                "PRD-SOF-004": "out_of_stock"
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "slow_demand": {
+      "description": "Weak-demand scenario with lower traffic engagement and conversion.",
+
+      "overrides": {
+        "company": {
+          "weekday_activity_multipliers": {
+            "Monday": 0.75,
+            "Tuesday": 0.75,
+            "Wednesday": 0.80,
+            "Thursday": 0.80,
+            "Friday": 0.85,
+            "Saturday": 0.90,
+            "Sunday": 0.85
+          },
+
+          "seasonality_month_multipliers": {
+            "September": 0.90,
+            "October": 0.90,
+            "November": 0.95,
+            "December": 0.95
+          },
+
+          "event_funnel_behavior": {
+            "base_add_to_cart_probability": 0.28,
+            "base_purchase_intent_probability": 0.20
+          },
+
+          "conversion_distribution": {
+            "base_probabilities": {
+              "purchase_intent": 0.30
+            }
+          }
+        }
+      }
+    }
+  }
+}
