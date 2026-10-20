@@ -1,0 +1,24 @@
+{
+  "engine_seeds": {
+    "behavior": 42,
+    "conversion": 42,
+    "customer": 42,
+    "customer_profile": 143,
+    "event": 42,
+    "order": 42
+  },
+  "generator_source_sha256": {
+    "d2c-synthetic-data/simulation/behavior_engine.py": "329750565bd7e5f991fb13cd1ab9500c265c302196b265374a883be39c868ec1",
+    "d2c-synthetic-data/simulation/conversion_engine.py": "02ec970b3959fbdcc48a2325af15ce968ba2b4109eaf65c2124f8c6166301211",
+    "d2c-synthetic-data/simulation/customer_engine.py": "70d29e04b76191d024509297945e430506144beac3259299aadb77c3e3bcf296",
+    "d2c-synthetic-data/simulation/event_engine.py": "e4607fc7ede8506c4637b348244196572952c27e88d66f381a9c817b1e703d9c",
+    "d2c-synthetic-data/simulation/order_engine.py": "722ae379af554c319d8378f9424a23feb5ca0f0ba14983553f7802df731b26f9",
+    "d2c-synthetic-data/simulation/production_dataset_runner.py": "a3c2aebfaa78aabe5050d960db10d06b381026a75e962a22ebc5fa987ad96f1c"
+  },
+  "input_fingerprint_sha256": "c8e122e17b3bb1cedfb1ffd3cb8f8c81ec93d7a01ab692b895710fff0b0f5bc9",
+  "order_seed_hardcoded": true,
+  "production_base_seed": 42,
+  "source_run_id": "simulation_run_20261004_120957",
+  "verification_scope": "static_seed_wiring",
+  "version": 1
+}
