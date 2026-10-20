@@ -1,0 +1,26 @@
+{
+  "audit_timestamp_utc": "2026-10-20T19:13:23.905064+00:00",
+  "checks": {
+    "cross_layer_reconciliation": "PASSED",
+    "generator_source_hashes": "PASSED",
+    "input_baseline": "PASSED",
+    "output_fingerprints": "PASSED",
+    "parquet_integrity": "PASSED",
+    "pipeline_execution_logs": "PASSED",
+    "postgresql_staging": "PASSED",
+    "referential_integrity": "PASSED",
+    "warehouse_reconciliation": "PASSED"
+  },
+  "execution_records_validated": 22,
+  "fresh_rebuild_tested": false,
+  "input_fingerprint_sha256": "c8e122e17b3bb1cedfb1ffd3cb8f8c81ec93d7a01ab692b895710fff0b0f5bc9",
+  "last_pipeline_execution_id": "9c9a5405-9495-4775-8f89-cb2b729a334e",
+  "output_fingerprint_sha256": "7802a490be4184d9f3a8e2d9974a29557d2e81aee51f4a3936787396fe8f1e7e",
+  "overall_status": "PASSED",
+  "parquet_files": 366,
+  "pipeline_stages_validated": 10,
+  "source_run_id": "simulation_run_20261004_120957",
+  "tracked_output_files": 411,
+  "validation_scope": "Existing outputs, latest successful pipeline execution, and database audit",
+  "version": 1
+}
