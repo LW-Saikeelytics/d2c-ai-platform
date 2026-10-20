@@ -378,7 +378,6 @@ LEFT JOIN daily_conversions v
     ON v.simulation_day = days.simulation_day;
 
 
-
 -- Overall daily validation.
 
 SELECT
