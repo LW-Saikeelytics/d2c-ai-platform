@@ -364,17 +364,19 @@ LEFT JOIN staging.daily_metrics_source source
     ON source.simulation_day = days.simulation_day
    AND source.run_id = :'run_id'
 
+
 LEFT JOIN daily_orders o
-    USING (simulation_day)
+    ON o.simulation_day = days.simulation_day
 
 LEFT JOIN daily_behavior b
-    USING (simulation_day)
+    ON b.simulation_day = days.simulation_day
 
 LEFT JOIN daily_events e
-    USING (simulation_day)
+    ON e.simulation_day = days.simulation_day
 
 LEFT JOIN daily_conversions v
-    USING (simulation_day);
+    ON v.simulation_day = days.simulation_day;
+
 
 
 -- Overall daily validation.
