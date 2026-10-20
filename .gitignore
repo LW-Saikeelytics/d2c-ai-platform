@@ -5,3 +5,4 @@ __pycache__/
 .ipynb_checkpoints/
 # Generated simulation outputs
 /d2c-synthetic-data/data/generated/
+d2c-data-platform/data/

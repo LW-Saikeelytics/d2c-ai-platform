@@ -1,0 +1,104 @@
+
+{
+  "schema_version": "1.0",
+  "description": "Canonical data contracts for the DreamNest data platform",
+  "datasets": {
+    "customers": {
+      "primary_key": ["customer_id"],
+      "fields": {
+        "customer_id": "string",
+        "segment": "string",
+        "price_tendency": "string",
+        "discount_sensitivity": "string",
+        "premium_product_tendency": "string",
+        "repeat_purchase_tendency": "string",
+        "city_id": "string",
+        "region": "string",
+        "acquisition_channel": "string",
+        "registration_day": "integer",
+        "lifetime_orders": "integer",
+        "lifetime_spend": "number",
+        "last_order_day": "nullable_integer",
+        "preferred_categories": "json_array",
+        "purchase_propensity": "number",
+        "behavior_profile": "string",
+        "status": "string"
+      }
+    },
+    "orders": {
+      "primary_key": ["order_id"],
+      "fields": {
+        "order_id": "string",
+        "simulation_day": "integer",
+        "customer_id": "string",
+        "segment": "string",
+        "city_id": "string",
+        "region": "string",
+        "channel": "string",
+        "product_id": "string",
+        "variant_id": "string",
+        "category": "string",
+        "subcategory": "string",
+        "quantity": "integer",
+        "unit_price": "number",
+        "gross_amount": "number"
+      }
+    },
+    "events": {
+      "primary_key": ["event_id"],
+      "fields": {
+        "simulation_day": "integer",
+        "customer_id": "string",
+        "event_type": "string",
+        "product_id": "string",
+        "category": "string",
+        "event_id": "string",
+        "order_id": "nullable_string"
+      }
+    },
+    "behavior_history": {
+      "primary_key": ["event_id"],
+      "fields": {
+        "simulation_day": "integer",
+        "customer_id": "string",
+        "event_type": "string",
+        "product_id": "string",
+        "category": "string",
+        "event_id": "string"
+      }
+    },
+    "conversion_history": {
+      "primary_key": ["simulation_day", "customer_id"],
+      "fields": {
+        "simulation_day": "integer",
+        "customer_id": "string",
+        "result": "json_object"
+      }
+    },
+    "daily_metrics": {
+      "primary_key": ["simulation_day"],
+      "fields": {
+        "simulation_day": "integer",
+        "customers": "integer",
+        "behavior_events": "json_object",
+        "conversion": "json_object",
+        "orders": "json_object",
+        "purchase_events": "integer"
+      }
+    },
+    "product_master": {
+      "primary_key": ["product_id"],
+      "fields": {
+        "product_id": "string",
+        "product_name": "string",
+        "category": "string",
+        "subcategory": "string",
+        "product_type": "string",
+        "price_band": "string",
+        "positioning": "string",
+        "launch_day": "integer",
+        "discontinue_day": "nullable_integer"
+      }
+    }
+  }
+}

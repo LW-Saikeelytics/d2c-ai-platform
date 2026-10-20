@@ -1,0 +1,108 @@
+{
+  "evaluation_name": "Phase 7 Synthetic Data Usefulness Evaluation",
+  "source_quality": {
+    "customers": 10000,
+    "products": 29,
+    "simulation_horizon_days": 90,
+    "raw_prelaunch_behavior_rows": 122,
+    "raw_prelaunch_order_rows": 2,
+    "ml_safe_prelaunch_behavior_rows": 0,
+    "ml_safe_prelaunch_order_rows": 0,
+    "valid_order_days_without_behavior": 3,
+    "temporal_filter_successful": true
+  },
+  "dataset_usability": {
+    "churn": {
+      "rows": 21839,
+      "snapshot_rates": {
+        "30": 0.30927349756786443,
+        "45": 0.3407067709738333,
+        "60": 0.36525086934923
+      },
+      "both_classes_present": true
+    },
+    "propensity": {
+      "rows": 30000,
+      "positive_rows": 2252,
+      "snapshot_rates": {
+        "30": 0.0729,
+        "45": 0.0747,
+        "60": 0.0776
+      },
+      "both_classes_present": true
+    },
+    "clv": {
+      "rows": 30000,
+      "positive_value_rows": 2252,
+      "snapshot_positive_rates": {
+        "30": 0.0729,
+        "45": 0.0747,
+        "60": 0.0776
+      },
+      "maximum_target_value": 171996.0
+    },
+    "segmentation": {
+      "rows": 10000,
+      "features": 46,
+      "missing_feature_values": 0
+    },
+    "recommendation": {
+      "interaction_rows": 21041,
+      "customers": 8044,
+      "products": 29
+    }
+  },
+  "learnability": {
+    "churn_signal_present": true,
+    "churn_test_roc_auc": 0.6602345641814619,
+    "propensity_signal_present": true,
+    "propensity_test_roc_auc": 0.842680121780027,
+    "propensity_pr_auc_lift": 5.840193217931345,
+    "clv_contains_predictive_signal": true,
+    "clv_test_r2": 0.15151944088286973,
+    "clv_beats_zero_mae": false,
+    "clv_beats_zero_rmse": true,
+    "segmentation_structure_present": true,
+    "segmentation_silhouette": 0.5831588630490132,
+    "recommendation_signal_present": true,
+    "recommendation_hit_rate_at_5": 0.4110824742268041
+  },
+  "readiness_checks": {
+    "customer_scale_sufficient": true,
+    "temporal_horizon_sufficient": true,
+    "catalog_available": true,
+    "ml_temporal_filter_clean": true,
+    "churn_dataset_usable": true,
+    "propensity_dataset_usable": true,
+    "clv_dataset_usable": true,
+    "segmentation_dataset_usable": true,
+    "recommendation_dataset_usable": true,
+    "supervised_signal_present": true,
+    "unsupervised_structure_present": true,
+    "recommendation_signal_present": true
+  },
+  "passed_checks": 12,
+  "total_checks": 12,
+  "all_readiness_checks_passed": true,
+  "strengths": [
+    "Point-in-time customer, product, behavior and conversion features can be constructed without using future outcomes.",
+    "Churn, purchase-propensity and 30-day customer-value targets can be generated from future windows.",
+    "The data contains measurable predictive signal for churn and purchase propensity.",
+    "Customer behavior contains clear unsupervised cluster structure.",
+    "Customer-product interactions support offline recommendation evaluation.",
+    "Generator-authored latent variables and final status fields were excluded from baseline model inputs.",
+    "Source inconsistencies discovered during ML preparation are explicitly handled rather than silently ignored."
+  ],
+  "limitations": [
+    "The frozen source contains 122 pre-launch behavior rows and 2 pre-launch orders. Phase 7 filters these before ML use.",
+    "The frozen source contains 3 valid order-days without matching behavior-history days. Phase 7 preserves these conversions using outer-merge logic.",
+    "The observation horizon is only 90 days, so the CLV target is a 30-day forward value proxy rather than true long-term lifetime value.",
+    "The recommendation catalog contains 29 products, so recommendation results are useful for baseline engineering but not representative of a large real-world catalog.",
+    "Synthetic generator rules can create learnable relationships that may be stronger or cleaner than real-world relationships.",
+    "No real customer dataset is available for external distributional or out-of-domain validation.",
+    "The single-stage CLV regressor does not beat the zero-value baseline on MAE, supporting a future two-stage purchase-probability plus conditional-value approach.",
+    "An anomaly/fraud dataset was intentionally skipped because the source does not contain sufficiently authentic fraud-related signals."
+  ],
+  "overall_assessment": "FIT_FOR_PHASE_7_ML_BASELINES_AND_DOWNSTREAM_PLATFORM_DEVELOPMENT",
+  "real_world_validity_statement": "Baseline performance on this synthetic dataset demonstrates engineering and modelling usefulness. It does not establish real-world production model performance or external validity."
+}

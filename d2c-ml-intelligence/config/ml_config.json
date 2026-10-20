@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "run_id": "simulation_run_20261004_120957",
+    "base_path": "../d2c-synthetic-data/data/generated/simulation_run_20261004_120957"
+  },
+
+  "reference_data": {
+    "product_master": "../d2c-synthetic-data/config/product_master.json"
+  },
+
+  "feature_engineering": {
+    "snapshot_days": [30, 45, 60],
+    "short_window_days": 7,
+    "long_window_days": 30
+  },
+
+  "training_datasets": {
+    "churn": {
+      "label_window_days": 30
+    },
+    "purchase_propensity": {
+      "label_window_days": 30
+    },
+    "clv": {
+      "label_window_days": 30
+    }
+  },
+
+  "unsupervised_datasets": {
+    "segmentation": {
+        "snapshot_day": 60
+    },
+
+    "recommendation": {
+        "snapshot_day": 60,
+
+        "interaction_weights": {
+        "product_view": 1.0,
+        "add_to_cart": 3.0,
+        "purchase_intent": 5.0,
+        "cart_abandonment": 2.0,
+        "purchase": 10.0
+        }
+    }
+  },
+  "baseline_models": {
+    "segmentation": {
+        "candidate_clusters": [2, 3, 4, 5, 6],
+        "silhouette_sample_size": 3000,
+        "random_state": 42
+    },
+    
+    "recommendation": {
+    "top_k": 5,
+    "evaluation_end_day": 90
+    }
+  }
+}

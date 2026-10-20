@@ -1,0 +1,20 @@
+{
+  "run_id": "simulation_run_20261004_120957",
+  "status": "PASSED",
+  "raw_source_files_verified": 25,
+  "parquet_files_verified": 366,
+  "daily_reconciliation_days": 90,
+  "clean_orders": 2913,
+  "clean_behavior_events": 93595,
+  "clean_events": 96508,
+  "purchase_events": 2913,
+  "conversion_decisions": 53833,
+  "historical_conversions": 2915,
+  "gross_revenue_inr": "53812160.00",
+  "day_30": {
+    "orders": 25,
+    "behavior_events": 1013,
+    "total_events": 1038,
+    "conversion_decisions": 571
+  }
+}

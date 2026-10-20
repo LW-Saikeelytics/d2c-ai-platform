@@ -1,0 +1,20 @@
+
+{
+  "platform_name": "dreamnest_data_platform",
+  "schema_version": "1.0",
+
+  "source": {
+    "run_id": "simulation_run_20261004_120957",
+    "dataset_path": "../d2c-synthetic-data/data/generated/simulation_run_20261004_120957",
+    "product_master_path": "../d2c-synthetic-data/config/product_master.json"
+  },
+
+  "expected_datasets": {
+    "customers": 10000,
+    "orders": 2915,
+    "events": 96632,
+    "behavior_history": 93717,
+    "conversion_history": 53833,
+    "daily_metrics": 90
+  }
+}

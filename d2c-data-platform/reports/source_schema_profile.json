@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "source_run_id": "simulation_run_20261004_120957",
+  "datasets": {
+    "customers": {
+      "rows": 10000,
+      "column_count": 17,
+      "columns": [
+        "customer_id",
+        "segment",
+        "price_tendency",
+        "discount_sensitivity",
+        "premium_product_tendency",
+        "repeat_purchase_tendency",
+        "city_id",
+        "region",
+        "acquisition_channel",
+        "registration_day",
+        "lifetime_orders",
+        "lifetime_spend",
+        "last_order_day",
+        "preferred_categories",
+        "purchase_propensity",
+        "behavior_profile",
+        "status"
+      ],
+      "observed_blank_counts": {
+        "last_order_day": 8584
+      }
+    },
+    "orders": {
+      "rows": 2915,
+      "column_count": 14,
+      "columns": [
+        "order_id",
+        "simulation_day",
+        "customer_id",
+        "segment",
+        "city_id",
+        "region",
+        "channel",
+        "product_id",
+        "variant_id",
+        "category",
+        "subcategory",
+        "quantity",
+        "unit_price",
+        "gross_amount"
+      ],
+      "observed_blank_counts": {}
+    },
+    "events": {
+      "rows": 96632,
+      "column_count": 7,
+      "columns": [
+        "simulation_day",
+        "customer_id",
+        "event_type",
+        "product_id",
+        "category",
+        "event_id",
+        "order_id"
+      ],
+      "observed_blank_counts": {
+        "order_id": 93717
+      }
+    },
+    "behavior_history": {
+      "rows": 93717,
+      "column_count": 6,
+      "columns": [
+        "simulation_day",
+        "customer_id",
+        "event_type",
+        "product_id",
+        "category",
+        "event_id"
+      ],
+      "observed_blank_counts": {}
+    },
+    "conversion_history": {
+      "rows": 53833,
+      "column_count": 3,
+      "columns": [
+        "simulation_day",
+        "customer_id",
+        "result"
+      ],
+      "observed_blank_counts": {}
+    },
+    "daily_metrics": {
+      "rows": 90,
+      "column_count": 6,
+      "columns": [
+        "simulation_day",
+        "customers",
+        "behavior_events",
+        "conversion",
+        "orders",
+        "purchase_events"
+      ],
+      "observed_blank_counts": {}
+    }
+  },
+  "product_master": {
+    "rows": 29,
+    "columns": [
+      "product_id",
+      "product_name",
+      "category",
+      "subcategory",
+      "product_type",
+      "price_band",
+      "positioning",
+      "launch_day",
+      "discontinue_day"
+    ]
+  }
+}
