@@ -1,4 +1,4 @@
-
+import os
 import json
 import subprocess
 import sys
@@ -103,7 +103,12 @@ def main():
 
         result = subprocess.run(
             command,
-            check=False
+            check=False,
+            env={
+                **os.environ,
+                "M14_PIPELINE_EXECUTION_ID":
+                    logger.execution_id
+            }
         )
 
         duration = (
