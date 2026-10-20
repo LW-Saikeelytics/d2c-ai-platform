@@ -267,9 +267,18 @@ def run_pipeline(execute=False):
         print("\nPIPELINE DRY RUN PASSED.")
         return
 
+    
     # ==========================================
     # EXECUTE IN DEPENDENCY ORDER
+    # WITH STRUCTURED STAGE LOGGING
     # ==========================================
+
+    logger = PipelineLogger(
+        source_run_id=run_id,
+        execution_id=os.environ.get(
+            "M14_PIPELINE_EXECUTION_ID"
+        )
+    )
 
     completed = set()
 
@@ -278,59 +287,130 @@ def run_pipeline(execute=False):
         name = step["name"]
         action = step["action"]
 
-        if not set(
-            step["dependencies"]
-        ).issubset(completed):
+        started = time.perf_counter()
 
-            raise RuntimeError(
-                f"Unmet dependency for {name}"
-            )
+        logger.log(
+            stage=name,
+            status="STARTED"
+        )
 
-        print("\n" + "-" * 70)
-        print(f"Stage: {name}")
-        print(f"Action: {action}")
-        print("-" * 70, flush=True)
+        try:
 
-        if action == "REUSE":
+            # ----------------------------------
+            # Validate dependencies
+            # ----------------------------------
 
-            # Manifest verification only.
-            # The final audit performs deeper checks.
-            check_manifests(
-                step["manifests"], run_id
-            )
+            if not set(
+                step["dependencies"]
+            ).issubset(completed):
 
-            print("Existing manifest verified.")
-
-        else:
-
-            subprocess.run(
-                [
-                    sys.executable,
-                    "-m",
-                    step["module"]
-                ],
-                cwd=ROOT,
-                check=True
-            )
-
-            check_manifests(
-                step["manifests"], run_id
-            )
-
-            if action == "AUDIT":
-
-                report = read_json(
-                    step["manifests"][0]
+                raise RuntimeError(
+                    f"Unmet dependency for {name}"
                 )
 
-                if report.get("status") != "PASSED":
-                    raise RuntimeError(
-                        "Final integrity audit failed."
+            print("\n" + "-" * 70)
+            print(f"Stage: {name}")
+            print(f"Action: {action}")
+            print("-" * 70, flush=True)
+
+            # ----------------------------------
+            # Reuse verified existing outputs
+            # ----------------------------------
+
+            if action == "REUSE":
+
+                check_manifests(
+                    step["manifests"],
+                    run_id
+                )
+
+                print(
+                    "Existing manifest verified."
+                )
+
+            # ----------------------------------
+            # Execute BUILD or AUDIT stage
+            # ----------------------------------
+
+            else:
+
+                subprocess.run(
+                    [
+                        sys.executable,
+                        "-m",
+                        step["module"]
+                    ],
+                    cwd=ROOT,
+                    check=True
+                )
+
+                check_manifests(
+                    step["manifests"],
+                    run_id
+                )
+
+                if action == "AUDIT":
+
+                    report = read_json(
+                        step["manifests"][0]
                     )
 
-        completed.add(name)
+                    if report.get(
+                        "status"
+                    ) != "PASSED":
 
-        print(f"Stage complete: {name}", flush=True)
+                        raise RuntimeError(
+                            "Final integrity audit failed."
+                        )
+
+            # ----------------------------------
+            # Record successful completion
+            # ----------------------------------
+
+            completed.add(name)
+
+            duration = (
+                time.perf_counter() - started
+            )
+
+            final_status = (
+                "REUSED"
+                if action == "REUSE"
+                else "SUCCEEDED"
+            )
+
+            logger.log(
+                stage=name,
+                status=final_status,
+                duration_seconds=duration
+            )
+
+            print(
+                f"Stage complete: {name}",
+                flush=True
+            )
+
+        except BaseException as error:
+
+            # ----------------------------------
+            # Record the failed stage
+            # ----------------------------------
+
+            duration = (
+                time.perf_counter() - started
+            )
+
+            logger.log(
+                stage=name,
+                status="FAILED",
+                duration_seconds=duration,
+                error_type=type(error).__name__
+            )
+
+            # Preserve existing failure behavior.
+            # Do not continue to dependent stages.
+
+            raise
 
     if len(completed) != len(plan):
         raise RuntimeError(
