@@ -11,12 +11,13 @@ from . import output_reproducibility as checker
 from .reproducibility_baseline import sha256_file
 
 
+
 def run_command(flag):
     buffer = io.StringIO()
 
     with (
         patch.object(
-            checker.sys,
+            sys,
             "argv",
             ["output_reproducibility.py", flag]
         ),
@@ -25,7 +26,6 @@ def run_command(flag):
         checker.main()
 
     return buffer.getvalue()
-
 
 def expect_change_detected():
 
