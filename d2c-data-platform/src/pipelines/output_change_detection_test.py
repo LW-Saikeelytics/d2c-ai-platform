@@ -1,5 +1,6 @@
 
 import io
+import sys
 import tempfile
 
 from contextlib import redirect_stdout
