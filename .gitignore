@@ -6,3 +6,4 @@ __pycache__/
 # Generated simulation outputs
 /d2c-synthetic-data/data/generated/
 d2c-data-platform/data/
+d2c-data-platform/logs/
