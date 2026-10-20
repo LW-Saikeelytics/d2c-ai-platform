@@ -41,7 +41,6 @@ CREATE TABLE IF NOT EXISTS warehouse.dim_customers (
     PRIMARY KEY (run_id, customer_key),
     UNIQUE (run_id, customer_id),
 
-    CHECK (registration_day >= 1),
     CHECK (lifetime_orders >= 0),
     CHECK (lifetime_spend >= 0),
     CHECK (jsonb_typeof(preferred_categories) = 'array')
