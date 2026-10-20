@@ -1,0 +1,125 @@
+{
+  "fingerprint_sha256": "c8e122e17b3bb1cedfb1ffd3cb8f8c81ec93d7a01ab692b895710fff0b0f5bc9",
+  "input_file_count": 29,
+  "inputs": [
+    {
+      "path": "config/database_config.json",
+      "sha256": "fb113704b3f914e605c3e346b3da4d9f81194e1c43d2f4fb9a9ef4d749aa2f13"
+    },
+    {
+      "path": "config/platform_config.json",
+      "sha256": "1e54f29ca34226ab2b5858028eed7933ca92b3b45d73483738e3bd820313084d"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/_raw_manifest.json",
+      "sha256": "12fbc791205290f438489a90663b512efc431b85b0015bca3c421f977a359963"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/reference/product_master.json",
+      "sha256": "10a36830685a7d40211a0c365e08baeb0554a3141da3e818a23bb50f79fb2e68"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/analytics_manifest.json",
+      "sha256": "147f3e2c79c9bad4a3654ae03635ffff9a79733f764768d4442d4e2a0b480e87"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/business_kpi_summary.csv",
+      "sha256": "08c37c62eed74e4a5180476a7f94c72c22ab1627d16ee94956534c2d412b1c4a"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/category_analytics.csv",
+      "sha256": "2ad5b91d4469043280246a4389de6003751e85f4a0d47a4158f96a161fae9855"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/customer_analytics.csv",
+      "sha256": "6316beb7a239af261daeec4b04c8f976438fbdfca1495c5b0bf4496018c7044f"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/daily_analytics.csv",
+      "sha256": "ad6c8ee7e80a6180c823f78330a82e9dac36b956c2ee11e1669070bbe079053b"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/funnel_summary.csv",
+      "sha256": "8d6e50256bdfa5fd7dbd53d70364e8a1b9f1f52610813c5e02fdef22c1337084"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/monthly_analytics.csv",
+      "sha256": "9136e5b709b98899f820d43818463c89ca6425d4a7b3fad21ed0e31bff6370c5"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/product_analytics.csv",
+      "sha256": "277e5fdabf9296e54706409fb3c4d47cfca62f150f85bc64b2a5b1cce245256d"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/analytics/weekly_analytics.csv",
+      "sha256": "1b3bf65856cea29423419168c147623447d8e4409fc9a64d3efc1da7afd0b5da"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/behavior_history.csv",
+      "sha256": "8640317fb0e90589e68be429adb0f2da3afac1ddaf73d1fad7a26e5fae65c08a"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/behavior_history.jsonl",
+      "sha256": "0e1afd5763f18172295f3becf6a26f018c34c2ab958bd24b7cb506b6fbd1f2be"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/conversion_history.csv",
+      "sha256": "a3a3d4f7b689a83772535de870321d8b6599fe9fbb60bae5bed944caa6532ec7"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/conversion_history.jsonl",
+      "sha256": "4dc9b3b764f948eb752b9bd5fd70a129d7a4135840e5db04edb4fde0aa64b9c9"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/customers.csv",
+      "sha256": "dc1f6110cf957449d343c9fb7d60ef957076818bb3e4e04c4a27544e47c07455"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/customers.jsonl",
+      "sha256": "2b8fd88888253ab8546fec312d31fa9dbf52d933d7b66ac0bc730747930c65d5"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/daily_metrics.csv",
+      "sha256": "8a606aeb2a7bdff4958ce8ba6dd7328d88c756cefcc3b0775a1e8c2208cdf87a"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/daily_metrics.jsonl",
+      "sha256": "de5b933e5076646a80e5294b945d8cf349cd6f31a2abff217d3875339d746f52"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/dataset_freeze_manifest.json",
+      "sha256": "905f4e27906df5f04620024846a2b94ff4baef78967e7dd21d46fb6e22f758ea"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/events.csv",
+      "sha256": "645eefabb9d44517ce9d56b57afe5e311a826df0285c36ec0d21d22627202558"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/events.jsonl",
+      "sha256": "11707662835f085aacf730b5cc9a4b6fe8b5800a4878874d38ff08010264ca8a"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/orders.csv",
+      "sha256": "8d7520927500e8b93974cc77c2c59380f545a570b9720f28d8f5f171407b09c9"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/orders.jsonl",
+      "sha256": "551c31ac22e5d06391d61f35068852386f2e9af9ab00d29aa945e5dca2b08329"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/simulation_manifest.json",
+      "sha256": "953d94be84fcc8e1e6034d89dc9fcf8ad95a1d2a914676036808771b10d3489c"
+    },
+    {
+      "path": "data/raw/run_id=simulation_run_20261004_120957/simulation/simulation_scenario.json",
+      "sha256": "fe2a507ed6391fcd980f7051a19c635759e23756dcbb56dc9dc51050cb6e30c3"
+    },
+    {
+      "path": "schemas/canonical_schema.json",
+      "sha256": "29960098ef0aa5f533c5dc13b1c402bdc8e571213340d9a2c35d263020291b74"
+    }
+  ],
+  "raw_source_file_count": 25,
+  "run_id": "simulation_run_20261004_120957",
+  "version": 1
+}
