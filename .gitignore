@@ -7,3 +7,7 @@ __pycache__/
 /d2c-synthetic-data/data/generated/
 d2c-data-platform/data/
 d2c-data-platform/logs/
+
+d2c-api/.venv/
+
+d2c-api/runtime/

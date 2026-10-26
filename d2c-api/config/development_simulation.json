@@ -1,0 +1,7 @@
+
+{
+  "days": 7,
+  "customers": 100,
+  "scenario": "baseline",
+  "seed": 42
+}
