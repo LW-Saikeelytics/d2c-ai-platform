@@ -1,0 +1,6 @@
+{
+  "days": 14,
+  "customers": 250,
+  "scenario": "festive_peak",
+  "seed": 42
+}

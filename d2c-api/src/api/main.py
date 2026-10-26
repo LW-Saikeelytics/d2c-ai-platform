@@ -30,6 +30,10 @@ from src.config.simulation_config import (
     build_runner_arguments,
 )
 
+from src.config.environment_settings import (
+    load_environment_settings,
+)
+
 from src.config.scenario_registry import (
     validate_scenario,
 )
@@ -236,13 +240,21 @@ def start_simulation(
     """
 
     # ---------------------------------------------
-    # DEVELOPMENT EXECUTION SWITCH
+    # VALIDATED ENVIRONMENT EXECUTION GATE
     # ---------------------------------------------
 
-    if os.environ.get(
-        "M14_ENABLE_SIMULATION_START"
-    ) != "1":
+    try:
+        environment_settings = load_environment_settings()
 
+    except ValueError:
+        # Fail closed for invalid environment settings.
+        # Do not expose internal configuration details.
+        raise HTTPException(
+            status_code=503,
+            detail="Simulation execution is disabled",
+        ) from None
+
+    if not environment_settings.simulation_start_enabled:
         raise HTTPException(
             status_code=503,
             detail="Simulation execution is disabled",

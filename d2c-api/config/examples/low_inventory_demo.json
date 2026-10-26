@@ -1,0 +1,6 @@
+{
+  "days": 10,
+  "customers": 200,
+  "scenario": "low_inventory",
+  "seed": 42
+}
