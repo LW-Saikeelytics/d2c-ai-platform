@@ -85,6 +85,17 @@ from src.api.run_history_view import (
     render_run_history_html,
 )
 
+from src.observability.production_logger import (
+    ProductionLogger,
+)
+
+# Structured application diagnostics.
+# Does not modify the global root logger.
+
+api_logger = ProductionLogger(
+    component="api",
+)
+
 app = FastAPI(
     title="M14 D2C AI Platform API",
     description="Simulation management and analytics API",
@@ -276,14 +287,26 @@ def start_simulation(
             config
         )
 
-    except SimulationBusyError:
+    except SimulationBusyError as error:
+
+        api_logger.log_event(
+            level="WARNING",
+            event="simulation_execution_busy",
+            error=error,
+        )
 
         raise HTTPException(
             status_code=409,
             detail="Another simulation is already active",
         ) from None
 
-    except (RuntimeError, OSError):
+    except (RuntimeError, OSError) as error:
+
+        api_logger.log_event(
+            level="ERROR",
+            event="simulation_execution_failed",
+            error=error,
+        )
 
         raise HTTPException(
             status_code=503,
@@ -302,7 +325,6 @@ def start_simulation(
     )
 
     return public_run(record)
-
 
 # =====================================================
 # PHASE 9.7.3 - GET SIMULATION DATASET CATALOG
