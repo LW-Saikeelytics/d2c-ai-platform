@@ -1,0 +1,5 @@
+# Direct dependencies identified by source import audit.
+# Exact versions are not yet locked.
+
+psycopg[binary]
+pyarrow

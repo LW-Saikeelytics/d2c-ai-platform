@@ -1,0 +1,6 @@
+# Direct dependencies identified by source import audit.
+# Exact versions are not yet locked.
+
+numpy
+pandas
+scikit-learn
